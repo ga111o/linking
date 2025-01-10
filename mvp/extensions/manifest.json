@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "MVP",
+  "version": "1.0",
+  "description": "MVP",
+  "permissions": ["activeTab", "scripting", "http://localhost:8000/*"],
+  "host_permissions": ["<all_urls>"],
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
